@@ -23,8 +23,7 @@ const Ouverture_de_compte = {
 
         alert("Votre découvert est : " + this.montantDeco + " \n Votre montant initial est : " + this.montantInitial);
     }
-    this.decouvert();
 }
+Ouverture_de_compte.decouvert();
 
 
-}
