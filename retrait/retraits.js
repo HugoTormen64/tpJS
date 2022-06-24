@@ -2,15 +2,13 @@ function retrait(){
 
     let decouvert = prompt('Montant de votre découvert 0 si aucun découvert autorisé ');
     while(isNaN(decouvert) == true || decouvert < 0 || decouvert == undefined || decouvert == "" ){
-        decouvert = prompt('Decouvert non autorisé mettre des valeurs positives');
+        decouvert = prompt('Decouvert non autorisé mettre les valeurs demandées');
     }
 
     let solde = prompt('Votre solde disponible');
     while(isNaN(solde) == true || solde < 0 || solde == undefined || solde == ""){
-        solde = prompt('Solde non autorisé mettre des valeurs positives');
+        solde = prompt('Solde non autorisé mettre les valeurs demandées');
     }
-    console.log(solde);
-    console.log(decouvert);
     
     solde = parseInt(solde);
     decouvert = parseInt(decouvert);
@@ -24,9 +22,8 @@ function retrait(){
         }
 
         let resultat =   parseInt(solde) - parseInt(retrait);
-        console.log(Math.sign(resultat));
         if((resultat < 0 && decouvert == 0) || (resultat < 0 && Math.abs(resultat) > decouvert)){
-            alert('solde insuffisant');
+            alert('Solde insuffisant');
             break;
         }
         solde = solde - retrait;
@@ -39,3 +36,4 @@ function retrait(){
     alert('Votre solde restant est de : ' + solde);
     alert('Votre découvert est de : ' + decouvert);
 }
+retrait();
