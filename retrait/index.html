@@ -5,11 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<main>
+    <div id="divPopUp">
+        <span id="popUp"></span>
+    </div>
+
     <a href="../index.html">Retour à l'acceuil</a>
     <a href="js_nabil/index.html">Agios</a>
-    <script src="retraits.js"></script>
+    <p>Etat du solde</p>
+    <ul>        
+        <li >Solde : <span id="balance"></span></li>
+        <li>Découvert : <span id="overdraft"></span></li>
+    </ul>
+    
+    <form>
+        <label for="withdrawal">Indiquez le retrait à effectuer</label>
+        <input type="number" name="withdrawal" id="withdrawal" min="1">
+        <button id="validate">Valider le retrait</button>
+    </form>
+</main>
+
+    <script src="retraitForm.js"></script>
+    <!-- <script src="retraits.js"></script> -->
     <!-- <script src="objetRetraits.js"></script> -->
 </body>
 </html>

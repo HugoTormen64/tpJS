@@ -1,0 +1,13 @@
+.popUpValidate{
+    background-color: green;
+    font-size: 2em;
+}
+.popUpError{
+    background-color: red;
+    color: white;
+    font-size: 2em;
+}
+#divPopUp{
+    text-align: center;
+    margin-bottom: 50px;
+}
