@@ -25,3 +25,11 @@ initInput.addEventListener('blur',  function(event){
           textAlert.innerHTML="Entrez un nouveau montant"
         }})
 
+let valide=document.getElementById("valider")
+valide.addEventListener('click', function(event){
+    event.preventDefault();
+    const textAlert = document.getElementById("alert-text")
+    textAlert.innerHTML="Votre compte a été bien crée"
+sessionStorage.setItem("overdraft",decoInput.value);
+sessionStorage.setItem("balance", initInput.value);
+})
