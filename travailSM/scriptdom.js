@@ -15,7 +15,7 @@ let valeur= event.target.value
 console.log(typeof valeur);
 valeur = parseInt(valeur);
 console.log(typeof valeur);
- if (valeur <100  || valeur >2000 || typeof valeur !== "number") {
+ if (valeur <100  || valeur >2000 || typeof valeur !== "number" || valeur<0) {
     decoInput.value="";
 const textAlert = document.getElementById("alert-text")
       textAlert.innerHTML="Veuillez rentrer de nouveau un montant de découvert"
@@ -38,7 +38,7 @@ valide.addEventListener('click', function(event){
     valeur = parseInt(valeur);
     console.log(valeur);
     console.log(typeof valeur);
-    if(typeof valeur !== "number" || typeof valeur == "undefined" || isNaN(valeur)){
+    if(typeof valeur !== "number" || typeof valeur == "undefined" || isNaN(valeur) || valeur <0){
         console.log(typeof valeur );
         event.preventDefault();
         const textAlert = document.getElementById("alert-text")
