@@ -1,7 +1,8 @@
 
     let validate = document.getElementById('validate'); 
+    console.log(validate);
     let overdraftInfo = sessionStorage.getItem("overdraft");
-    let balanceInfo = sessionStorage.getItem("balance");
+    let balanceInfo = sessionStorage.getItem("acount");
     let textBalance = document.getElementById('balance');
     let textOverdraft = document.getElementById('overdraft');
     textOverdraft.innerHTML =overdraftInfo;
@@ -9,7 +10,7 @@
 
     function overdraftCalculation(event){
         event.preventDefault();
-        let balance = parseInt(sessionStorage.getItem("balance"));
+        let balance = parseInt(sessionStorage.getItem("acount"));
         let overdraft = parseInt(sessionStorage.getItem("overdraft"));
         let withdrawalText = document.getElementById('withdrawal').value;
         let withdrawal = parseInt(withdrawalText);
@@ -27,7 +28,7 @@
                 popUpClassValidate();
                 document.getElementById('popUp').innerHTML = "Opération réussie";
                 balance = balance - withdrawal;
-                sessionStorage.setItem("balance", balance) ;
+                sessionStorage.setItem("acount", balance) ;
                 document.getElementById('balance').innerHTML = balance;
             }
         }
