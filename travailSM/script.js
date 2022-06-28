@@ -24,4 +24,4 @@ function decouvert() {
 
     alert("Votre découvert est : " + montantDeco + " \n Votre montant initial est : " + montantInitial);
 }
-decouvert()
+decouvert();
