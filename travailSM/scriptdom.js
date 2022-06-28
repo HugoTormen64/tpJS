@@ -46,8 +46,9 @@ valide.addEventListener('click', function(event){
     }else{
     event.preventDefault();
     const textAlert = document.getElementById("alert-text")
-    textAlert.innerHTML="Votre compte a été bien crée"
+    textAlert.innerHTML="Votre compte a bien été créé";
 sessionStorage.setItem("overdraft",decoInput.value);
 sessionStorage.setItem("balance", initInput.value);
-}
-})
+setTimeout (function(){
+    location.href="../retrait/index.html"},3000)
+}});
