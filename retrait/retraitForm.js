@@ -1,3 +1,6 @@
+if(sessionStorage.getItem('balance') == null || sessionStorage.getItem('overdraft') == null){
+    location.href = '../travailSM/index.html';
+}
 
     let validate = document.getElementById('validate'); 
     let overdraftInfo = sessionStorage.getItem("overdraft");

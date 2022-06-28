@@ -3,6 +3,10 @@ Agios = (montant utilisé du découvert * nombre de jour d'utilisation * taux de
 Le taux de banque = 10 / 100 = 0.1;
 */
 
+if(sessionStorage.getItem('balance') == null || sessionStorage.getItem('overdraft') == null){
+    location.href = '../travailSM/index.html';
+}
+
 let ovdAm=sessionStorage.getItem("overdraft");
 console.log(ovdAm);
 document.getElementById("overdraftAmount").value=ovdAm;
