@@ -3,24 +3,25 @@ Agios = (montant utilisé du découvert * nombre de jour d'utilisation * taux de
 Le taux de banque = 10 / 100 = 0.1;
 */
 
+let ovdAm=sessionStorage.getItem("overdraft");
+console.log(ovdAm);
+document.getElementById("overdraftAmount").value=ovdAm;
+
 function CalculBkFees() {
 
 
     const bankRate = 10 / 100;
     let ovdftTme = 0,
-        ovdAm = 0,
         errorAmount = document.getElementById("errorAm");
 
 
     // Faire entrer le montant du découvert et Arrondir à 2 chiffres
-    ovdAm = document.getElementById("overdraftAmount");
     console.log(ovdAm);
 
     const validBtn = document.querySelector("button") // récupère l'état du bouton
     validBtn.addEventListener("click", function (e) { //écoute le bouton au clic
         e.preventDefault(); //permet de ne pas recharger la page au clic du bouton
         console.log("test bouton");
-        ovdAm = document.getElementById("overdraftAmount").value; // récupère la valeur de l'input overdraft Amount
         ovdAm = parseFloat(ovdAm);
         console.log("montant de l'input overdraf Amount " + ovdAm);
         console.log(typeof ovdAm);
