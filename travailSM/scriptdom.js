@@ -25,7 +25,7 @@ initInput.addEventListener('blur',  function(event){
     console.log(typeof valeur);
     valeur = parseInt(valeur);
     console.log(typeof valeur);
-     if (valeur <500 || typeof valeur !== "number") {
+     if (valeur <500 || typeof valeur !== "number" || valeur<0) {
         initInput.value="";
     const textAlert = document.getElementById("alert-text")
           textAlert.innerHTML="Entrez un nouveau montant"
