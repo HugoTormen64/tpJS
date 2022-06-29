@@ -1,10 +1,37 @@
+/*Main*/
 body{
     margin: 0;
     padding: 0;
 }
-#deco {
-    visibility: hidden;
+main{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
 }
+
+/*Elements and Images*/
+h1{
+    text-align: center;
+}
+#left{
+    width: 60%;
+    overflow: hidden;
+    /*background-image: url(images/background.png) ;*/
+}
+#right{
+    width: 100%;
+    padding-left: 20%;
+}
+#left img{
+    width: 100%;
+}
+#divLien img{
+    align-items: center;
+    justify-content: flex-start;
+    width: 20%;
+}
+
+/*Popups and dynamic elements*/
 .popUpValidate{
     background-color: green;
     font-size: 2em;
@@ -20,21 +47,20 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
-#lien{
+#deco {
+    visibility: hidden;
+}
+
+/*Links*/
+#divLien{
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 300px;
 }
- main{
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-}
 a{
     display: flex;
-    justify-content: center;
     background-color: rgb(236, 231, 231);
     border-radius: 5px;
     text-decoration: none;
@@ -49,23 +75,15 @@ a:focus{
 a:hover{
     background-color: rgb(25, 165, 25);
 } 
-h1{
-    text-align: center;
-}
-#left{
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 60%;
-}
-#right{
+a p{
+    align-self: center;
     justify-content: flex-end;
-    align-items: center;
-}
-#left img{
     width: 100%;
+    text-align: left;
+    padding-left: 10%;
 }
-#lien img{
-    align-items: center;
+a img{
+    align-self: center;
     justify-content: flex-start;
-    width: 20%;
+    padding-left: 2%;
 }
